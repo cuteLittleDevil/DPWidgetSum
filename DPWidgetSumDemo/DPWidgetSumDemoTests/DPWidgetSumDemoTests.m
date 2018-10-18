@@ -1,18 +1,18 @@
 //
-//  DPWidgetSumTests.m
-//  DPWidgetSumTests
+//  DPWidgetSumDemoTests.m
+//  DPWidgetSumDemoTests
 //
-//  Created by yupeng xia on 2018/10/17.
+//  Created by yupeng xia on 2018/10/18.
 //  Copyright © 2018年 yupeng xia. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface DPWidgetSumTests : XCTestCase
+@interface DPWidgetSumDemoTests : XCTestCase
 
 @end
 
-@implementation DPWidgetSumTests
+@implementation DPWidgetSumDemoTests
 
 - (void)setUp {
     [super setUp];
