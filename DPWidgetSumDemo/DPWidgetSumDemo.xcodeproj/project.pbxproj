@@ -110,7 +110,7 @@
 		FD3A5079217815A500E17385 /* DPWidgetSumDemo */ = {
 			isa = PBXGroup;
 			children = (
-				FD3A50B32178173F00E17385 /* DPWidgetSumSDK */,
+				FD3A50B32178173F00E17385 /* DPWidgetSum_SDK */,
 				FD3A50AC217816F100E17385 /* Resources */,
 				FD3A507A217815A500E17385 /* AppDelegate.h */,
 				FD3A507B217815A500E17385 /* AppDelegate.m */,
@@ -153,14 +153,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		FD3A50B32178173F00E17385 /* DPWidgetSumSDK */ = {
+		FD3A50B32178173F00E17385 /* DPWidgetSum_SDK */ = {
 			isa = PBXGroup;
 			children = (
 				FD3A50B42178173F00E17385 /* CustomImageTextButton.m */,
 				FD3A50B52178173F00E17385 /* CustomImageTextButton.h */,
 			);
-			name = DPWidgetSumSDK;
-			path = ../../DPWidgetSumSDK;
+			name = DPWidgetSum_SDK;
+			path = ../../DPWidgetSum_SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
