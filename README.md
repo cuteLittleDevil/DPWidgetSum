@@ -104,5 +104,5 @@ All source code is licensed under the [MIT License](https://github.com/xiayuqing
 
 ## Pictures show
 <p align="center" >
-<img src="DPWebViewLocalCacheDemo.gif" title="DPWebViewLocalCache sequence diagram">
+<img src="DP_Gitf_0.gif" title="DPWebViewLocalCache sequence diagram">
 </p>
