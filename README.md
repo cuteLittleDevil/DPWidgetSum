@@ -16,7 +16,7 @@
 ## Getting Started
 - Read this Readme doc
 - Read the [How to use section](https://github.com/xiayuqingfeng/DPWidgetSum#how-to-use)
-- Read the [documentation @ CocoaDocs](http://cocoadocs.org/docsets/DPWidgetSum/)
+- Read the [documentation @ CocoaDocs](https://cocoapods.org/pods/DPWidgetSum)
 - Try the example by downloading the project from Github or even easier using CocoaPods try `pod try DPWidgetSum`
 - Get to the [installation steps](https://github.com/rs/DPWidgetSum#installation)
 
@@ -35,26 +35,21 @@
 ```objective-c
 Objective-C:
 
-#import <DPLocalCache.h>
+#import <CustomImageTextButton.h>
 ...
 - (void)viewDidLoad {
-    //Any place to add only once!!!
-    //添加浏览器本地缓存处理
-    DPLocalCache *urlCache = [[DPLocalCache alloc] initWithMemoryCapacity:20 * 1024 * 1024
-                                                             diskCapacity:200 * 1024 * 1024
-                                                                 diskPath:nil
-                                                                cacheTime:60*60*24
-                                                                 modeTybe:DOWNLOAD_MODE
-                                                             subDirectory:@"PXPT"];
-    [NSURLCache setSharedURLCache:urlCache];
+    //make button
+    CustomImageTextButton *promptButton = [CustomImageTextButton customButtonWithFrame:CGRectMake(5, 20+35, 60, 30)       ImageTextType:CustomImageTextButtonType_Left_IconLeft_TextRight imageTextGap:0 imageName:nil heightImageName:nil text:@"文字" font:[UIFont systemFontOfSize:13] textColor:[UIColor blackColor] heightTextColor:[UIColor blackColor] backGroundColor:[UIColor redColor] backGroundHightColor:[UIColor redColor] sideGap:0];
+    [promptButton3lcvzzza addTarget:self action:@selector(promptButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:promptButton];
 }
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 
-    //Any place to add only once!!!
-    DPLocalCache *urlCache = (DPLocalCache *)[NSURLCache sharedURLCache];
-    [urlCache deleteCacheFolder];
+- (void)promptButtonAction:(CustomImageTextButton *)button{
+    button.selected = !button.selected;
+    //Modify the layout and frame
+    button.currentFrame = CGRectMake(button.frame.origin.x+55, button.frame.origin.y-55, 0, 0);
+    button.imageTextButtonType = CustomImageTextButtonType_Center_IconBottom_TextTop;
+    [self.view bringSubviewToFront:button];
 }
 ...
 
