@@ -4,7 +4,7 @@
 
 ## Features
 
-- [1] An UIButton custom class
+-  An UIButton custom class
 - [x] An asynchronous cache downloader
 - [x] An asynchronous memory + disk cache caching with automatic cache expiration handling
 - [x] A background cache decompression
