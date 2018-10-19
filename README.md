@@ -4,7 +4,7 @@
 
 ## Features
 
-- [x] Categories for `UIWebView`, `MKWebview`, adding cache management
+- [1] An UIButton custom class
 - [x] An asynchronous cache downloader
 - [x] An asynchronous memory + disk cache caching with automatic cache expiration handling
 - [x] A background cache decompression
