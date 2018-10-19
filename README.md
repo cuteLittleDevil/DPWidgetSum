@@ -5,21 +5,13 @@
 ## Features
 
 -  An UIButton custom class
-- [x] An asynchronous cache downloader
-- [x] An asynchronous memory + disk cache caching with automatic cache expiration handling
-- [x] A background cache decompression
-- [x] A guarantee that the same URL won't be downloaded several times
-- [x] A guarantee that bogus URLs won't be retried again and again
-- [x] A guarantee that main thread will never be blocked
-- [x] Performances!
-- [x] Use GCD and ARC
 
 ## Requirements
 - iOS 7.0 or later
 - tvOS 9.0 or later
 - watchOS 2.0 or later
 - OS X 10.8 or later
-- Xcode 7.3 or later
+- Xcode 8.0 or later
 
 ## Getting Started
 - Read this Readme doc
