@@ -15,17 +15,17 @@
 
 ## Getting Started
 - Read this Readme doc
-- Read the [How to use section](https://github.com/xiayuqingfeng/DPWebViewLocalCache#how-to-use)
-- Read the [documentation @ CocoaDocs](http://cocoadocs.org/docsets/DPWebViewLocalCache/)
-- Try the example by downloading the project from Github or even easier using CocoaPods try `pod try DPWebViewLocalCache`
-- Get to the [installation steps](https://github.com/rs/DPWebViewLocalCache#installation)
+- Read the [How to use section](https://github.com/xiayuqingfeng/DPWidgetSum#how-to-use)
+- Read the [documentation @ CocoaDocs](http://cocoadocs.org/docsets/DPWidgetSum/)
+- Try the example by downloading the project from Github or even easier using CocoaPods try `pod try DPWidgetSum`
+- Get to the [installation steps](https://github.com/rs/DPWidgetSum#installation)
 
 ## Who Uses It
-- Find out [who uses DPWebViewLocalCache](https://github.com/xiayuqingfeng/DPWebViewLocalCache/wiki/Who-Uses-DPWebViewLocalCache) and add your app to the list.
+- Find out [who uses DPWidgetSum](https://github.com/xiayuqingfeng/DPWidgetSum/wiki/Who-Uses-DPWidgetSum) and add your app to the list.
 
 ## Communication
-- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/DPWebViewLocalCache). (Tag 'DPWebViewLocalCache')
-- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/DPWebViewLocalCache).
+- If you **need help**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/DPWidgetSum). (Tag 'DPWidgetSum')
+- If you'd like to **ask a general question**, use [Stack Overflow](http://stackoverflow.com/questions/tagged/DPWidgetSum).
 - If you **found a bug**, open an issue.
 - If you **have a feature request**, open an issue.
 - If you **want to contribute**, submit a pull request.
