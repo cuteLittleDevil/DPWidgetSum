@@ -1,5 +1,5 @@
 <p align="center" >
-<img src="header.png" title="DPWebViewLocalCache logo" float=left>
+<img src="header.png" title="DPWidgetSum logo" float=left>
 </p>
 
 ## Features
@@ -63,7 +63,7 @@ Objective-C:
 Installation
 ------------
 
-There are three ways to use DPWebViewLocalCache in your project:
+There are three ways to use DPWidgetSum in your project:
 - using CocoaPods
 - using Carthage
 - by cloning the project into your repository
@@ -75,7 +75,7 @@ There are three ways to use DPWebViewLocalCache in your project:
 #### Podfile
 ```
 platform :ios, '7.0'
-pod 'DPWebViewLocalCache', '~> 1.1.6'
+pod 'DPWidgetSum', '~> 1.0.4'
 ```
 
 If you are using Swift, be sure to add `use_frameworks!` and set your target to iOS 8+:
@@ -92,9 +92,9 @@ community can help you solve it.
 - [PingshengZhao(赵坪生)](https://github.com/PingshengZhao)
 
 ## Licenses
-All source code is licensed under the [MIT License](https://github.com/xiayuqingfeng/DPWebViewLocalCache/blob/master/LICENSE).
+All source code is licensed under the [MIT License](https://github.com/xiayuqingfeng/DPWidgetSum/blob/master/LICENSE).
 
 ## Pictures show
 <p align="center" >
-<img src="DP_Gitf_0.gif" title="DPWebViewLocalCache sequence diagram">
+<img src="DP_Gitf_0.gif" title="DPWidgetSum sequence diagram">
 </p>
