@@ -162,9 +162,20 @@
     CGFloat width_Image = image.size.width;
     CGFloat height_Image = image.size.height;
     
-    CGFloat hight_Font = _deployFont.lineHeight;
+    CGSize sizeTextMax = CGSizeZero;
+    if (_imageTextButtonType == CustomImageTextButtonType_Center_IconLeft_TextRight     ||
+        _imageTextButtonType == CustomImageTextButtonType_Center_IconRight_TextLeft     ||
+        _imageTextButtonType == CustomImageTextButtonType_Left_IconLeft_TextRight       ||
+        _imageTextButtonType == CustomImageTextButtonType_Left_IconRight_TextLeft       ||
+        _imageTextButtonType == CustomImageTextButtonType_Right_IconLeft_TextRight      ||
+        _imageTextButtonType == CustomImageTextButtonType_Right_IconRight_TextLeft) {
+        sizeTextMax = CGSizeMake(width_Self-width_Image-_imageTextGap, _deployFont.lineHeight);
+    }else if (_imageTextButtonType == CustomImageTextButtonType_Center_IconTop_TextBottom ||
+              _imageTextButtonType == CustomImageTextButtonType_Center_IconBottom_TextTop) {
+        sizeTextMax = CGSizeMake(width_Self, _deployFont.lineHeight);
+    }
     
-    CGSize sizeText = [CustomImageTextButton sizeWithFont:_deployFont adjustSize:CGSizeMake(width_Self-width_Image-_imageTextGap, hight_Font) alignment:NSTextAlignmentLeft str:_deployText];
+    CGSize sizeText = [CustomImageTextButton sizeWithFont:_deployFont adjustSize:sizeTextMax alignment:NSTextAlignmentLeft str:_deployText];
     
     CGFloat width_Text = sizeText.width;
     CGFloat height_Text = sizeText.height;
@@ -277,9 +288,20 @@
     CGFloat width_Image = image.size.width;
     CGFloat height_Image = image.size.height;
     
-    CGFloat hight_Font = _deployFont.lineHeight;
+    CGSize sizeTextMax = CGSizeZero;
+    if (_imageTextButtonType == CustomImageTextButtonType_Center_IconLeft_TextRight     ||
+        _imageTextButtonType == CustomImageTextButtonType_Center_IconRight_TextLeft     ||
+        _imageTextButtonType == CustomImageTextButtonType_Left_IconLeft_TextRight       ||
+        _imageTextButtonType == CustomImageTextButtonType_Left_IconRight_TextLeft       ||
+        _imageTextButtonType == CustomImageTextButtonType_Right_IconLeft_TextRight      ||
+        _imageTextButtonType == CustomImageTextButtonType_Right_IconRight_TextLeft) {
+        sizeTextMax = CGSizeMake(width_Self-width_Image-_imageTextGap, _deployFont.lineHeight);
+    }else if (_imageTextButtonType == CustomImageTextButtonType_Center_IconTop_TextBottom ||
+              _imageTextButtonType == CustomImageTextButtonType_Center_IconBottom_TextTop) {
+        sizeTextMax = CGSizeMake(width_Self, _deployFont.lineHeight);
+    }
     
-    CGSize sizeText = [CustomImageTextButton sizeWithFont:_deployFont adjustSize:CGSizeMake(width_Self-width_Image-_imageTextGap, hight_Font) alignment:NSTextAlignmentLeft str:_deployText];
+    CGSize sizeText = [CustomImageTextButton sizeWithFont:_deployFont adjustSize:sizeTextMax alignment:NSTextAlignmentLeft str:_deployText];
     
     CGFloat width_Text = sizeText.width;
     CGFloat height_Text = sizeText.height;
