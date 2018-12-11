@@ -3,7 +3,7 @@
 //  ZhongCaiWebApp
 //
 //  Created by xiayupeng on 15/9/11.
-//  Copyright (c) 2015年 wsf. All rights reserved.
+//  Copyright (c) 2018年 zcw. All rights reserved.
 //
 
 #import "CustomImageTextButton.h"
@@ -53,7 +53,7 @@
         button.deployText = text;
         button.deployFont = font;
         button.imageSize = CGSizeMake(imageWidth, imageHeight);
-
+        
         button.imageName = imageName;
         button.heightImageName = heightImageName;
         button.selectedImageName = selectedImageName;
@@ -94,11 +94,15 @@
     [self setTitle:_deployText forState:(UIControlStateNormal)];
     [self setTitle:_deployText forState:(UIControlStateHighlighted)];
     [self setTitle:_deployText forState:(UIControlStateSelected)];
+    [self titleRectForContentRect:self.bounds];
+    [self imageRectForContentRect:self.bounds];
 }
 ///获取 或 修改Font
 - (void)setDeployFont:(UIFont *)deployFont{
     _deployFont = deployFont;
     self.titleLabel.font = _deployFont;
+    [self titleRectForContentRect:self.bounds];
+    [self imageRectForContentRect:self.bounds];
 }
 ///获取 或 修改图片 size: 默认 CGSizeMake(0, 0), 图片原始尺寸
 - (void)setImageSize:(CGSize)imageSize{
@@ -120,14 +124,20 @@
 - (void)setImageName:(id)imageName{
     _imageName = imageName;
     [self setImageSize:_imageSize];
+    [self titleRectForContentRect:self.bounds];
+    [self imageRectForContentRect:self.bounds];
 }
 - (void)setHeightImageName:(id)heightImageName{
     _heightImageName = heightImageName;
     [self setImageSize:_imageSize];
+    [self titleRectForContentRect:self.bounds];
+    [self imageRectForContentRect:self.bounds];
 }
 - (void)setSelectedImageName:(id)selectedImageName{
     _selectedImageName = selectedImageName;
     [self setImageSize:_imageSize];
+    [self titleRectForContentRect:self.bounds];
+    [self imageRectForContentRect:self.bounds];
 }
 ///获取 或 修改按钮的背景颜色
 - (void)setBackGroundColor:(id)backGroundColor{
@@ -153,9 +163,9 @@
     CGFloat height_Image = image.size.height;
     
     CGFloat hight_Font = _deployFont.lineHeight;
-
+    
     CGSize sizeText = [CustomImageTextButton sizeWithFont:_deployFont adjustSize:CGSizeMake(width_Self-width_Image-_imageTextGap, hight_Font) alignment:NSTextAlignmentLeft str:_deployText];
-
+    
     CGFloat width_Text = sizeText.width;
     CGFloat height_Text = sizeText.height;
     
@@ -173,7 +183,7 @@
             [self setFrame:aFrame];
             
         }else if (_imageTextButtonType == CustomImageTextButtonType_Center_IconTop_TextBottom ||
-            _imageTextButtonType == CustomImageTextButtonType_Center_IconBottom_TextTop) {
+                  _imageTextButtonType == CustomImageTextButtonType_Center_IconBottom_TextTop) {
             
             width_Self = MAX(width_Image,sizeText.width);
             CGRect aFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, width_Self, self.frame.size.height);
@@ -195,7 +205,7 @@
             height_Self = MAX(height_Image,sizeText.height);
             CGRect aFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height_Self);
             [self setFrame:aFrame];
-
+            
         }else if (_imageTextButtonType == CustomImageTextButtonType_Center_IconTop_TextBottom ||
                   _imageTextButtonType == CustomImageTextButtonType_Center_IconBottom_TextTop) {
             
@@ -206,7 +216,7 @@
         }
         _sideGap = 0;
     }
-
+    
     CGFloat frameX = 0;
     CGFloat frameY = 0;
     CGRect returnFrame = CGRectZero;
@@ -251,7 +261,7 @@
             frameY = (height_Self-height_Image-_imageTextGap-height_Text)/2;
         }
             break;
-            default: break;
+        default: break;
     }
     returnFrame.origin = CGPointMake(frameX, frameY);
     returnFrame.size = sizeText;
@@ -321,7 +331,7 @@
         }
         _sideGap = 0;
     }
-
+    
     CGFloat frameX = 0;
     CGFloat frameY = 0;
     CGRect returnFrame = CGRectZero;
@@ -366,7 +376,7 @@
             frameY = (height_Self-height_Image-_imageTextGap-height_Text)/2+height_Text+_imageTextGap;
         }
             break;
-            default: break;
+        default: break;
     }
     returnFrame.origin = CGPointMake(frameX, frameY);
     returnFrame.size = CGSizeMake(image.size.width, image.size.height);

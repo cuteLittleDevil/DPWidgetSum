@@ -3,7 +3,7 @@
 //  ZhongCaiWebApp
 //
 //  Created by xiayupeng on 15/9/11.
-//  Copyright (c) 2015年 wsf. All rights reserved.
+//  Copyright (c) 2018年 zcw. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -13,12 +13,12 @@ typedef NS_ENUM(NSInteger,CustomImageTextButtonType){
     CustomImageTextButtonType_Center_IconLeft_TextRight = 0x1,
     ///整体垂直居中,水平居中: 左Text右Icon
     CustomImageTextButtonType_Center_IconRight_TextLeft,
-
+    
     ///整体垂直居中,水平居左: 左Icon右text
     CustomImageTextButtonType_Left_IconLeft_TextRight,
     ///整体垂直居中,水平居左: 左Text右Icon
     CustomImageTextButtonType_Left_IconRight_TextLeft,
-
+    
     ///整体垂直居中,水平居右: 左Icon右text
     CustomImageTextButtonType_Right_IconLeft_TextRight,
     ///整体垂直居中,水平居右: 左Text右Icon
