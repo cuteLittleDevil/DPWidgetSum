@@ -32,7 +32,7 @@
     [sectionTitleButton removeFromSuperview];
     sectionTitleButton = nil;
     
-    CGRect newFram = CGRectMake(30, 60, _widthField.text.floatValue, _heightField.text.floatValue);
+    CGRect newFram = CGRectMake(30, 30, _widthField.text.floatValue, _heightField.text.floatValue);
     UIEdgeInsets newEdgeInsets = UIEdgeInsetsMake(_topField.text.floatValue, _leftField.text.floatValue, _bottomField.text.floatValue, _rightField.text.floatValue);
     
     sectionTitleButton = [DPButton buttonWithFrame:newFram imageTextType:[self getLayoutType] gap:_gapField.text.floatValue normalImage:_currentImage.image heightImage:_currentImage.image selectedImage:_currentImage.image text:_textStrField.text font:[UIFont systemFontOfSize:_textFontField.text.floatValue] textColor:[UIColor blackColor] heightTextColor:[UIColor blackColor] selectedTextColor:[UIColor blackColor] backGroundColor:[UIColor orangeColor] backGroundHightColor:[UIColor orangeColor] backGroundSelectedColor:[UIColor orangeColor] sideEdgeInsets:newEdgeInsets imageSize:CGSizeMake(_imageWidthField.text.floatValue, _imageHeightField.text.floatValue)];
