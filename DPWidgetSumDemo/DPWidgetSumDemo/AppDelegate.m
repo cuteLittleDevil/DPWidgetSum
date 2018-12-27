@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "IQKeyBoardManager.h"
 @interface AppDelegate ()
 
 @end
