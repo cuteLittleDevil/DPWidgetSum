@@ -37,19 +37,63 @@ Objective-C:
 
 #import <CustomImageTextButton.h>
 ...
-- (void)viewDidLoad {
-    //make button
-    CustomImageTextButton *promptButton = [CustomImageTextButton customButtonWithFrame:CGRectMake(5, 20+35, 60, 30)       ImageTextType:CustomImageTextButtonType_Left_IconLeft_TextRight imageTextGap:0 imageName:nil heightImageName:nil text:@"文字" font:[UIFont systemFontOfSize:13] textColor:[UIColor blackColor] heightTextColor:[UIColor blackColor] backGroundColor:[UIColor redColor] backGroundHightColor:[UIColor redColor] sideGap:0];
-    [promptButton3lcvzzza addTarget:self action:@selector(promptButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:promptButton];
+- (IBAction)makeButton:(id)sender {
+    [sectionTitleButton removeFromSuperview];
+    sectionTitleButton = nil;
+    
+    CGRect newFram = CGRectMake(30, 30, _widthField.text.floatValue, _heightField.text.floatValue);
+    UIEdgeInsets newEdgeInsets = UIEdgeInsetsMake(_topField.text.floatValue, _leftField.text.floatValue, _bottomField.text.floatValue, _rightField.text.floatValue);
+    
+    sectionTitleButton = [DPButton buttonWithFrame:newFram imageTextType:[self getLayoutType] gap:_gapField.text.floatValue normalImage:_currentImage.image heightImage:_currentImage.image selectedImage:_currentImage.image text:_textStrField.text font:[UIFont systemFontOfSize:_textFontField.text.floatValue] textColor:[UIColor blackColor] heightTextColor:[UIColor blackColor] selectedTextColor:[UIColor blackColor] backGroundColor:[UIColor orangeColor] backGroundHightColor:[UIColor orangeColor] backGroundSelectedColor:[UIColor orangeColor] sideEdgeInsets:newEdgeInsets imageSize:CGSizeMake(_imageWidthField.text.floatValue, _imageHeightField.text.floatValue)];
+    
+    [self.view addSubview:sectionTitleButton];
+    
+    [sectionTitleButton setBackgroundColor:[UIColor clearColor]];
+    sectionTitleButton.titleLabel.backgroundColor = [UIColor purpleColor];
+    sectionTitleButton.imageView.backgroundColor = [UIColor redColor];
 }
 
-- (void)promptButtonAction:(CustomImageTextButton *)button{
-    button.selected = !button.selected;
-    //Modify the layout and frame
-    button.currentFrame = CGRectMake(button.frame.origin.x+55, button.frame.origin.y-55, 0, 0);
-    button.imageTextButtonType = CustomImageTextButtonType_Center_IconBottom_TextTop;
-    [self.view bringSubviewToFront:button];
+- (IBAction)updateButton:(id)sender {
+    if (_widthField.text.floatValue != sectionTitleButton.frame.size.width || _heightField.text.floatValue != sectionTitleButton.frame.size.height) {
+        sectionTitleButton.frame = CGRectMake(sectionTitleButton.frame.origin.x, sectionTitleButton.frame.origin.y, _widthField.text.floatValue, _heightField.text.floatValue);
+    }
+    
+    if ([self getLayoutType] != sectionTitleButton.imageTextButtonType) {
+        sectionTitleButton.imageTextButtonType = [self getLayoutType];
+    }
+    
+    if (_gapField.text.floatValue != sectionTitleButton.imageTextGap) {
+        sectionTitleButton.imageTextGap = _gapField.text.floatValue;
+    }
+    
+    UIEdgeInsets newEdgeInsets = UIEdgeInsetsMake(_topField.text.floatValue, _leftField.text.floatValue, _bottomField.text.floatValue, _rightField.text.floatValue);
+    if (!UIEdgeInsetsEqualToEdgeInsets(newEdgeInsets, sectionTitleButton.sideEdgeInsets)) {
+        sectionTitleButton.sideEdgeInsets = newEdgeInsets;
+    }
+    
+    if (![sectionTitleButton.deployText isEqualToString:_textStrField.text]) {
+        sectionTitleButton.deployText = _textStrField.text;
+    }
+    
+    if (sectionTitleButton.deployFont != [UIFont systemFontOfSize:_textFontField.text.floatValue]) {
+        sectionTitleButton.deployFont = [UIFont systemFontOfSize:_textFontField.text.floatValue];
+    }
+    
+    if (!CGSizeEqualToSize(sectionTitleButton.imageSize, CGSizeMake(_imageWidthField.text.floatValue, _imageHeightField.text.floatValue))) {
+        sectionTitleButton.imageSize = CGSizeMake(_imageWidthField.text.floatValue, _imageHeightField.text.floatValue);
+    }
+    
+    if (sectionTitleButton.imageName != _currentImage.image) {
+        sectionTitleButton.imageName = _currentImage.image;
+    }
+    
+    if (sectionTitleButton.heightImageName != _currentImage.image) {
+        sectionTitleButton.heightImageName = _currentImage.image;
+    }
+    
+    if (sectionTitleButton.selectedImageName != _currentImage.image) {
+        sectionTitleButton.selectedImageName = _currentImage.image;
+    }
 }
 ...
 
