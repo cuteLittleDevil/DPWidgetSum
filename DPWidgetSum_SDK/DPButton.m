@@ -29,6 +29,8 @@
     
     DPButton* button = [super buttonWithType:UIButtonTypeCustom];
     if(button){
+        button.frame = frame;
+        
         //设置按钮布局
         button.imageTextButtonType = aImageTextType;
         
@@ -58,9 +60,8 @@
         button.imageName = aNormalImage;
         button.heightImageName = aHeightImage;
         button.selectedImageName = aSelectedImage;
-
-        button.frame = frame;
         
+        [button layoutSubviews];
     }
     return button;
 }
